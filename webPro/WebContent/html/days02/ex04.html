@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html이미지</title>
+</head>
+<body>
+
+<!-- 모든 html 요소는 속성(attribute)을 가진다.
+속성은 html요소의 추가정보를 제공.
+속성은 시작태그 안에 선언 
+시작태그 속성명= "속성값" 속성명='속성값' 속성명=속성값
+ -->
+ GOOGLE
+      <!-- alt= alternator, when the image fails to occur, -->
+<!--url : uniform resource locators
+ 	구성 : schema://prefix.domain:port/path/filename
+ 	schema 인터넷 서비스 유형 - http, https, ftp, file
+ 	prefix 도메인 접부다 www
+ 	port 호스트의 포트번호 > 기본포트 80
+ 	path 서버의 경로
+ 	URL 인코딩 
+ 		ascii코드 문자 집합을 사용하여 인터넷을 통해서만 전송할 수 있다.
+ 	    한글이라면 자동변환 %16진수값으로 대체됨
+ 	URL은 공백을 포함할수 없다. +또는%20으로 대체
+-->
+
+<img alt="GOOGLE" src="http://localhost/webPro/html/days02/images/google.png" >
+<img alt="GOOGLE" src="http://localhost/webPro/html/days02/images/google.png" >
+<hr> <!-- horizontal rule = 수평장 -->
+
+이미지 크기설정 단위생략하면 PIXEL
+<img HEIGHT = "45" WIDTH = "120px" alt="GOOGLE" src="http://localhost/webPro/html/days02/images/%EA%B5%AC%EA%B8%80.png" >
+%단위는 부모요소의 100% 기준 현재는 body;
+<img WIDTH = "50%" alt="GOOGLE" src="http://localhost/webPro/html/days02/images/google.png" >
+
+<br>이미지 크기는 width height를 사용해도 되지만
+style 속성을 권장 cuz 스타일시트가 이미지 크기를 변경하지 못하게 할 수 있기때문.<br>
+<img style="width:141px;height:46px" alt="GOOGLE" src="images/google.png" >
+
+<hr>
+<img style="width:141px;height:46px" alt="GOOGLE" src="images/google.png" ><br>
+<img style="width:141px;height:46px" alt="GOOGLE" src="../days01/images/google.png" >
+ 	
+</body>
+</html>
