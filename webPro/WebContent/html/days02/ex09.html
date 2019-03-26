@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ 
+
+</head>
+<body>
+<button>Toggle</button>
+<div style="background-color: black;padding: 20;color: white">
+<h3>div설명</h3>
+<p>
+	div:블럭모드<br>
+	html요소를 포함하는 용기역할<br>
+</p>
+</div>
+<div style="background-color: black;padding: 20;color: white">
+<h3>div설명</h3>
+<p>
+	div:블럭모드<br>
+	html요소를 포함하는 용기역할<br>
+</p>
+</div>
+<div style="background-color: black;padding: 20;color: white">
+<h3>div설명</h3>
+<p>
+	div:블럭모드<br>
+	html요소를 포함하는 용기역할<br>
+</p>
+</div>
+<script>
+
+$( "button" ).click(function() {
+	  if ( $( "div:first" ).is( ":hidden" ) ) {
+	    $( "div" ).show( "slow" );
+	  } else {
+	    $( "div" ).slideUp();
+	  }
+	});
+
+</script>
+</body>
+</html>
