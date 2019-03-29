@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body{
+margin: 0; padding: 0;}
+ul#nav{
+list-style-type: none;
+margin:0; padding:0;
+background-color: #f1f1f1;
+width: 25%;
+position: fixed;
+text-align: center;
+height: 100%;
+}
+ul#nav li a{
+display: block;
+padding: 8px 16px;
+text-decoration: none;
+}
+ul#nav li a.active{
+background-color: #4CAF50;
+color: white;
+}
+ul#nav li a:hover:not(#active){
+background-color: #555;
+color:white;
+}
+div#content{
+background-color: aqua;
+height:1000PX;
+margin-left: 25%;
+padding: 2px 16px;}
+
+
+
+</style>
+</head>
+<body>
+<!-- a[href=#]*3>lorem -->
+
+<ul id="nav">
+	<li><a class="active" href="">Home</a></li>
+	<li><a href="">News</a></li>
+	<li><a href="">Contact</a></li>
+	<li><a href="">About</a></li>
+</ul>
+
+<!-- div>h2>lorem5^h3>lorelm10^p*2>lorem -->
+<div id="content">
+	<h2>Lorem ipsum dolor sit amet.</h2>
+	<h3>
+		<lorelm10></lorelm10>
+	</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iste accusantium officia modi odio expedita dicta neque aliquid culpa ducimus eum libero! Provident quasi aliquam quis tenetur sint dolor totam!</p>
+	<p>Illo similique ducimus optio fuga eligendi nisi amet vel repudiandae? Fuga expedita quidem nesciunt soluta natus assumenda suscipit et ut quod quasi repellendus quae laboriosam impedit esse eius iste distinctio.</p>
+	<p>sometext</p>
+	<p>sometext</p>
+	<p>sometext</p>
+	<p>sometext</p>
+	<p>sometext</p>
+	<p>sometext</p>
+</div>
+
+</body>
+</html>

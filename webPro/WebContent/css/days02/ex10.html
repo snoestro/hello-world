@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+.special_bg{
+   position:relative;
+   height: 130px;
+}
+.search{
+  position: absolute;
+  top:50%;
+  left:219px;
+  margin-top: -20px;
+  width: 512px;
+}
+.search .green_window {
+    display: inline-block;
+    width: 470px;
+    height: 45px;
+    border: 2px solid #03cf5d;
+    background-color: #fff;
+}
+
+.search  .input_text {
+    margin: 12px 0 0 9px; /* t r b l*/ 
+    width: 405px;
+    height: 23px;
+                outline: 0;
+    border: 0;
+    background-color: transparent;
+    color: #000;
+    font-weight: 700;  /* 100 ~ 900 bold(500)*/
+    font-size: 18px;
+          line-height: 23px;
+    *ime-mode: active;
+}
+.blind{
+  position: absolute;
+  overflow: hidden;
+  clip:rect(0 0 0 0 );
+  margin:-1px;
+  width:1px;
+  height: 1px;
+}
+.search .ico_search_submit {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 21px;
+    height: 21px;
+    background-position: -4px -60px;
+}
+
+.ico_search_submit{ 
+    background-image: url(https://s.pstatic.net/static/www/img/2018/sp_search.png);
+    background-image: linear-gradient(transparent,transparent),url(https://s.pstatic.net/static/www/img/2018/sp_search.svg);
+    background-repeat: no-repeat;
+}
+
+.search .sch_smit {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    overflow: visible;
+    width: 49px;
+    height: 49px;
+    border: 0;
+    background: #03cf5d;
+}
+.search .btn_arw {
+    position: absolute;
+    top: 50%;
+    right: 49px;
+    margin-top: -21px;
+    padding: 19px 12px 19px 6px;
+}
+.search .btn_arw .ico_arr {
+    width: 9px;
+    height: 4px;
+    background-position: -87px -60px;
+        display: block;
+}
+.area_logo .naver_logo, .search .btn_arw .ico_arr, .search .btn_arw.dim .ico_arr, .search .btn_arw.dim.fold .ico_arr, .search .btn_arw.fold .ico_arr, .search .btn_keyboard .ico_keyboard, .search .btn_keyboard.btn_keyboard_on .ico_keyboard, .search .ico_search_submit, .svgless .area_logo .naver_logo, .svgless .search .btn_arw .ico_arr, .svgless .search .btn_arw.dim .ico_arr, .svgless .search .btn_arw.dim.fold .ico_arr, .svgless .search .btn_arw.fold .ico_arr, .svgless .search .btn_keyboard .ico_keyboard, .svgless .search .btn_keyboard.btn_keyboard_on .ico_keyboard, .svgless .search .ico_search_submit {
+    background-image: url(https://s.pstatic.net/static/www/img/2018/sp_search.png);
+    background-image: linear-gradient(transparent,transparent),url(https://s.pstatic.net/static/www/img/2018/sp_search.svg);
+    background-repeat: no-repeat;
+}
+
+</style>
+</head>
+<body>
+<div class="special_bg">
+<div id="search" class="search">
+<span class="green_window">
+  <input type="text" id="query" class="input_text"
+  name="query" title="검색어 입력" maxlength="255"
+  tabindex="1" accesskey="s" style="ime-mode:active"
+  autocomplete="off"
+  onclick=""
+   />
+</span> 
+ <div id="nautocomplete" class="autocomplete">
+   <a href="javascript:;" role="button" tabindex="2" class="btn_arw _btn_arw fold" 
+   queryid="C1553841351252382809">
+   <span class="blind _text">자동완성 펼치기</span><span class="ico_arr"></span></a>
+ </div>
+
+<button id="search_btn" type="submit" title="검색" 
+ tabindex="3" class="sch_smit">
+   <span class="blind">검색</span>
+   <span class="ico_search_submit"></span>
+ </button>
+</div> <!-- search -->
+</div> <!-- special_bg -->
+</body>
+</html>

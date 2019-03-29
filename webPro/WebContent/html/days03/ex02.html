@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table{margin: 0 auto; 
+      border-collapse: collapse;} 가운데정렬 margin 탑 오 바텀 왼순 입력
+botton{font-size: 10px; width:50px}
+th{background-color: black; color: white;}
+tr:nth-child(odd){background-color: #eee;}
+tbody td{border-bottom: dotted 1px grey}
+</style>
+</head>
+<body>
+
+<table style="width: 500px" border="0">
+<caption>DEPT INFO</caption>
+<thead>
+ 	<tr>
+ 		<th align="center">deptno</th>
+ 		<th>dname</th>
+ 		<th>loc</th>
+ 	</tr>
+</thead>
+<!-- <thead>
+ 	<tr>
+ 		<td align="center"><b>deptno</b></td>
+ 		<td>dname</td>
+ 		<td>loc</td>
+ 	</tr>
+</thead> -->
+
+<tbody>
+ 	<tr>
+ 		<td><input type="checkbox">10</td>
+ 		<td>ACC</td>
+ 		<td>New York</td>
+ 	</tr>
+ 	 	<tr>
+ 		<td><input type="checkbox">20</td>
+ 		<td>Research</td>
+ 		<td>DALLAS</td>
+ 	</tr>
+ 	 	<tr>
+ 		<td><input type="checkbox">30</td>
+ 		<td>Operation</td>
+ 		<td>Chicago</td>
+ 	</tr>
+ 	 	<tr>
+ 		<td><input type="checkbox">40</td>
+ 		<td>Sales</td>
+ 		<td>Seoul</td>
+ 	</tr>
+</tbody>
+
+<tfoot>
+	<tr>
+ 		<td colspan="3" align="center" border ="0" >
+ 		<button>add</button><button>edit</button><button>remove</button>
+ 		</td>
+ 	</tr> 	
+</tfoot>
+</table>
+
+</body>
+</html>

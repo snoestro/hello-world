@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+p.solid {border-style: solid;}
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p#box {
+	padding: 10px;
+	height: 100px;
+	/* border-top-style: dotted;
+	border-right-style: solid;
+	border-bottom-style: dashed;
+	border-left-style: hidden; */
+	border-style: dotted solid; 
+	background-color: lightgrey;
+	border-bottom: solid 6px red;
+	border-radius: 100px;
+	}
+</style>
+</head>
+<body>
+
+<!-- p#box>lorem5 -->
+<p id="box">Lorem ipsum dolor sit amet.</p>
+
+<!-- p[class]*10>lorem5 -->
+<p class="solid">Lorem ipsum dolor sit amet.</p>
+<p class="dotted">Pariatur illo at laboriosam quo.</p>
+<p class="dashed">Unde eaque dolore iusto esse.</p>
+<p style = "border-style: hidden;">Omnis aliquam consequuntur quos quis?</p>
+<p style = "border-style: double;">Consequuntur excepturi eius fugiat ratione.</p>
+<p style = "border-style: groove;">Animi deserunt unde cum nisi.</p>
+<p style = "border-style: ridge;">Dignissimos dolore laboriosam ratione sint?</p>
+<p style = "border-style: outset;">Tempora magni est ullam doloremque!</p>
+<p class="">In quod consequatur ab dignissimos.</p>
+<p class="">Voluptatum ea minus fugit iusto.</p>
+<!-- border-style 속성을 주지 않으면 border-width, color은 적용되지 않음 -->
+</body>
+</html>
