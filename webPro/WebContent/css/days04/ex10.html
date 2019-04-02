@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h1::before{ 
+	content: url("./images/smiley.gif");
+}
+h1::after{
+	content:"~~~~";
+	color: red;
+}
+p::selection{
+	color:red;
+	background: yellow;
+}
+p::moz-selection{
+	/* firefox 브라우저 */
+	color:red;
+	background: yellow;
+}
+p::first-letter {
+	size:xxl;
+	color:red;
+}
+p::first-line {
+	
+	color:aqua;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum beatae tempora quibusdam laboriosam magni veniam excepturi tempore mollitia eos? Aliquam neque quis aspernatur ut magni harum sapiente aut officia velit?</p>
+
+</body>
+</html>

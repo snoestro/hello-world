@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 1. - 오후 4:19:36  k≡n¡k</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+h1{
+  background-color: green;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  color:white;
+  margin: 0;
+}
+
+#nav{
+   padding:25px;
+   border:2px solid aqua;
+   background-color:blue;
+   color:white;
+   
+   position: -webkit-sticky; /* 브라우저 safari */
+   position: sticky;
+   top:0;
+}
+
+.container{
+   position: relative;   /* 기준점 */
+}
+
+.container img{
+  width:100%;
+  height: auto;
+  opacity: 0.3;   /* 투명도 30% */
+}
+
+.topleft{
+  position:absolute;
+   top:8px;
+   left:16px;
+   font-size: 18px;
+}
+.topright{
+  position:absolute;
+   top:8px;
+   right:16px;
+   font-size: 18px;
+}
+.bottomleft{
+  position:absolute;
+   bottom:8px;
+   left:16px;
+   font-size: 18px;
+}
+.bottomright{
+  position:absolute;
+   bottom:8px;
+   right:16px;
+   font-size: 18px;
+}
+.centermiddle{
+  position:absolute;
+   top:50%;
+   left:0;
+   font-size: 18px;
+   text-align: center;
+   width: 100%;
+}
+</style>
+</head>
+<body>
+<h1>top</h1>
+<div id="nav">
+   메뉴1 메뉴2 메뉴3 메뉴4
+</div>
+<div id="content" style="padding-bottom: 1000px">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad a voluptatum laboriosam impedit hic dolore voluptate ducimus dicta voluptas rem unde architecto ipsa corporis illo similique nemo optio nobis animi?</p>
+  <p>Reprehenderit earum velit iure excepturi tempore eaque quisquam dolores harum illum voluptatibus quae laudantium saepe libero soluta distinctio illo in blanditiis sint recusandae neque ratione natus ex ipsa fuga similique.</p>
+  <p>Laudantium ullam veniam asperiores quis cumque dolores esse assumenda possimus deleniti beatae officia nihil omnis nobis vel cum amet quam dolorum iusto similique suscipit ducimus impedit modi corporis iste vitae.</p>
+  <div class="container">
+    <img src="/webPro/css/images/img_5terre_wide.jpg" alt="" />
+    <div class="topleft">topleft</div>
+    <div class="topright">topright</div>
+    <div class="bottomleft">bottomleft</div>
+    <div class="bottomright">bottomright</div>
+    <div class="centermiddle">centermiddle</div>
+  </div>
+</div>
+</body>
+</html>
+
+
+<!-- 
+     postion:sticky 속성값
+                   끈적끈적
+                  : fixed  + relative  
+                  스크롤의 위치 기반으로 배치 -> 연동..
+ -->
+
+
+
+
+
+
+
+
+
