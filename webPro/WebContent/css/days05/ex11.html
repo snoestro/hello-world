@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 3.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/* backfroud origin 속성 */
+div{
+	border: solid 15px black;
+	padding: 35px;
+	background-image: url("/webPro/css/images/img_flwr.gif");
+	background-repeat: no-repeat;
+}
+#box1{
+	background-origin: padding-box; /* 패딩 왼쪽상단 ***디폴트값*/
+}
+#box2{
+	background-origin: border-box; /* 보더 왼쪽상단 */
+}
+#box3{
+	background-origin: content-box; /* 내용 왼쪽상단 */
+}
+span{
+	border: dotted 15px;
+	padding: 35px;
+	background-color: yellow;
+	display: block;
+	margin: 10px;
+}
+#demo1{
+	background-clip: border-box;
+}
+#demo2{
+	background-clip: content-box;
+}
+#demo3{
+	background-clip: padding-box;
+}
+
+</style>
+</head>
+<body>
+<span id="demo1">
+	<h1>Lorem.</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eum!
+</span>
+<span id="demo2">
+	<h1>A?</h1>Fugiat quaerat obcaecati nam sunt ea ipsa ab neque et.
+</span>
+<span id="demo3">
+	<h1>Fugit?</h1>Ab quas explicabo corporis saepe id molestiae dolores libero inventore.
+</span>
+
+<div id="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem id excepturi earum maiores labore iusto tenetur. Excepturi optio illo inventore accusamus magnam provident enim atque ut at dolorum. Nemo quaerat.</div>
+<br />
+<div id="box2">In fuga quasi eum explicabo adipisci placeat odio aperiam sequi libero asperiores perferendis tenetur vero unde facere ea veritatis atque molestiae repellat dolorem dolorum sint minus ut consectetur quam saepe.</div>
+<br />
+<div id="box3">Eius saepe et veniam praesentium ea obcaecati architecto neque aliquid dolorem pariatur quo odit cumque sunt error nemo! Eaque natus ad laborum consequatur maiores quod a animi doloribus minima totam.</div>
+ 
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 3.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+#demo{
+	padding: 15px;
+	/* background-image: url("/webPro/css/images/img_flwr.gif"), url("/webPro/css/images/paper.gif");
+	background-position: right bottom ,left top ;
+	background-repeat: no-repeat, repeat; */
+	background: url("/webPro/css/images/img_flwr.gif") right bottom no-repeat,
+				url("/webPro/css/images/paper.gif") left top repeat;
+}
+</style>
+
+<style>
+p{
+	width: 200px;
+	height: 150px;
+	border: solid 1px #ddd;
+	background-image: url("/webPro/css/images/img_flwr.gif");
+	background-size: 100px 80px;  /* contain, cover값 줄 수 있음 */
+	background-repeat: no-repeat;
+}
+#box2{
+	background-size: contain;
+}
+#box3{
+	background-size: cover;
+}
+
+
+</style>
+
+<style>
+/* 현재페이지 완전히 배경 */
+html{
+	background: url("http://211.63.89.163:8095/20190403%28%EC%88%98%29/img_man.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+</style>
+
+</head>
+<body>
+
+<p id="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente maiores dolorem in ullam ipsa reiciendis repellat ut quod sed vel consequuntur totam qui facere quam veritatis fuga dignissimos atque tempore?</p>
+<p id="box2">Harum praesentium nisi facere corrupti sed numquam iure vero quidem atque ad a similique eius sit voluptatum consequatur modi in dolor ducimus consectetur voluptatem quam tempora blanditiis saepe provident repellat!</p>
+<p id="box3">Dolor mollitia itaque aspernatur nihil asperiores laborum distinctio autem commodi eos odit. Voluptatibus quam repellendus molestias suscipit voluptates sint officiis neque omnis doloribus odio dolore doloremque in accusantium perspiciatis non.</p>
+
+<hr>
+<!-- 다중배경 -->
+<div id="demo"><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2> Repellendus officia eaque nobis necessitatibus modi illum reiciendis inventore quis libero nostrum quam placeat ad quod asperiores numquam sit sunt sequi ab?</div>
+ 
+</body>
+</html>

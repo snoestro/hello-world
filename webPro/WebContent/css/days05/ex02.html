@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+input{
+	width: 300px;
+	border: solid 1px #ddd;
+}
+input:focus {
+	background: yellow;
+}
+input[type]{
+	width: 400px;
+}
+input[type='text']{
+	width: 400px;
+	border-color: red;
+}
+  /* 물결"~~~"= "sth" sth를 포함 */
+input[title~="info"]{
+	border-color: green;
+}
+  /* ^= "sth" sth로 시작 */
+input[title^="info"]{
+	border-color: blue;
+}
+  /* $= "sth" sth로 끝 */
+input[title$="info"]{
+	border-color: red;
+}
+  /* 문자열"info"를 포함 */
+input[title*="info"]{
+	border-color: green;
+}
+</style>
+<style>
+ [class*=top]{
+ 	background-color: aqua;
+ }
+
+</style>
+</head>
+<script>
+$('[class*=top]').click(function () {
+	$(this).hide(1000);
+});
+
+</script>
+<body>
+
+<h1 class="top-header">Lorem ipsum.</h1>
+<p class="top-text">Lorem ipsum.</p>
+<p class="topcontent">Lorem ipsum.</p>
+
+
+
+<hr />
+<!-- css 속성 선택자 attribute selector -->
+<!-- input type 생략 기본=text -->
+<!-- (input[type='text']+br)*5 -->
+<input autofocus="autofocus"> <br />
+<input> <br />
+<input type="text" title="info"/> <br />
+<input type="text" title="student info"/> <br />
+<input type="text" title=" info " /> <br />
+<input type="password" /> <br />
+
+
+</body>
+</html>
