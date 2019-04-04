@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 4.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+p{
+	width: 200px;
+	border: solid 1px black;
+	/* 넘치는 내용 숨기기*/
+	white-space: nowrap;
+	overflow: hidden;
+}
+p.ex01{
+	/* 숨겨진 내용을 clip 잘르기, ellipsis ...으로 표시*/
+	text-overflow: clip;
+}
+p.ex02{
+	text-overflow: ellipsis;
+}
+p:hover{
+	overflow: visible;
+	white-space: normal;
+}
+</style>
+<style>
+
+div{
+	width: 140px;
+	border: solid 1px red;
+	word-wrap:break-word;
+	/* word-break:break-all; */ 
+}
+</style>
+
+</head>
+<body>
+<!-- css [단어] 줄바꿈 -->
+<br>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate.</div><br>
+<div>Earum sit nesciunt eos nisi ipsam numquam labore quae hic.</div><br>
+<br>
+
+ <p class="ex01">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati impedit.</p>
+ <p class="ex02">Placeat numquam esse porro expedita labore illum quasi laboriosam autem.</p>
+
+</body>
+</html>

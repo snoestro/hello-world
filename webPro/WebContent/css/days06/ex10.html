@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 4.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+div{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	transition-property:width;
+	transition-duration:2s;
+	
+
+}
+div:hover{
+	width: 300px;
+	transition: width 2s;
+}
+</style>
+<style>
+/* 애니메이션 */
+p{
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	animation-name:example03;
+	animation-duration: 4s;
+	animation-delay: 1s;
+	animation-iteration-count:3; /* infinity */
+	animation-direction:alternate;
+	animation-timing-duntion:ease;
+	position: relative;	
+}
+
+@Keyframes example{
+	from { background-color: green;} 
+	to {background-color: red;}
+}
+@Keyframes example02{
+	0% { background-color: green;} 
+	25% {background-color: red;}
+	50% { background-color: yellow;} 
+	75% {background-color: blue;}
+	100% {background-color: aqua;}
+}
+@Keyframes example03{
+	0% { background-color: green; left:0px; top:0px; transform:rotate(0deg);} 
+	25% {background-color: red; left:200px; top:0px; transform:rotate(360deg);}
+	50% { background-color: yellow; left:200px; top:200px; transform:rotate(-360deg);} 
+	75% {background-color: blue; left:0px; top:200px; transform:rotate(360deg);}
+	100% {background-color: aqua; left:0px; top:0px; transform:rotate(-360deg);}
+}
+</style>
+</head>
+<body>
+<!-- 
+css animation 
+1. 요소가 a스타일에서 b스타일로 점진적으로 변경.
+2. 원하는 만큼의 css속성을 변경가능.
+3. ㄱ.키프레임 먼저 지정 --- @Keyframes 규칙
+   ㄴ. 각각의 키프레임은 특정 시간에 요소의 스타일을 유지함.
+   
+-->
+<p></p>
+
+
+<hr>
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 4.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+	/* writing-mode 속성 설명 */
+p.ex1{
+	writing-mode:vertical-lr;
+}	
+p.ex2{
+	writing-mode:horizontal-tb;
+}	
+p.ex2 > span{
+	writing-mode:vertical-rl;
+}	
+</style>
+</head>
+<body>
+ 
+ <p class="ex1">Lorem ipsum dolor sit amet.</p>
+ <p class="ex2">Repellat <span>amet</span> libero debitis impedit.</p>
+ <p class="ex3">Non ut ex nobis ad.</p>
+ 
+</body>
+</html>

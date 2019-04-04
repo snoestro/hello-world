@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 4.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+body{
+   margin: 30px;
+   background: #e9e9e9;
+}
+div.polaroid{
+   width: 284px;
+   padding: 10px 10px 20px 10px;
+   border: solid 1px #bfbfbf;
+   box-shadow: 10px 10px 5px #aaa;
+}
+div.rotate_right{
+   float: left;
+   transform:rotate(7deg);
+   -ms-transform:rotate(7deg);
+   -webkit-transform:rotate(7deg);
+}
+div.rotate_right:hover{
+   transform:rotate(-7deg);
+   transition:0.1s;
+}
+div.rotate_left:hover{
+   transform:rotate(8deg);
+   transition:0.1s;
+}
+div.rotate_left{
+   float: left;
+   transform:rotate(-8deg);
+   -ms-transform:rotate(-8deg);
+   -webkit-transform:rotate(-8deg);
+}
+</style>
+</head>
+<body>
+<div class="polaroid rotate_right">
+   <img src="/webPro/css/images/pulpitrock.jpg" alt="" width="284" height="213" />
+   <p class="caption">Lorem ipsum dolor sit.</p>
+</div>
+<div class="polaroid rotate_left">
+   <img src="/webPro/css/images/cinqueterre.jpg"alt="" width="284" height="213"/>
+   <p class="caption">Lorem ipsum dolor sit.</p>
+</div>
+</body>
+</html>
