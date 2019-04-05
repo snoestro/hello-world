@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 5.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+.flex-con{
+	background-color: #f1f1f1;
+	height: 600px;
+	display: flex;
+	flex-direction: row; /* 1. 방향 기본 row */
+	flex-wrap: wrap;     /* 2. 플렉스 항목 줄바꿈 기본 nowrap*/
+						 /* 3. flex-flow:  row wrap */
+	justify-content: center; /* 4. 플렉스 항목 가로 정렬 */
+	align-items: center; /*5. 플렉스 항목 세로 정렬 */
+	align-content: space-between; /* 6.플렉스 라인을 정렬할 때 사용하는 속성 */
+}
+.flex-con > div{
+	width:100px;
+	background-color: lime;
+	margin: 10px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 75px;
+}
+
+
+</style>
+</head>
+<body>
+<!-- css flexbox -->
+<!-- .flex-con>div*3>{$} -->
+
+<div class="flex-con">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+	<div>6</div>
+	<div>7</div>
+	<div>8</div>
+	<div>9</div>
+	<div>10</div>
+	<div>11</div>
+	<div>12</div>
+</div>
+ 
+</body>
+</html>

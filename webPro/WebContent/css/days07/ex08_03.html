@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 5. - 오후 2:14:07  k≡n¡k</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/* 
+p:first-child{
+   border:solid 2px red;
+}
+ */
+ 
+ p:first-of-type{
+   border:solid 2px red;
+}
+
+/* 
+:last-child{
+  border:solid 2px blue;
+} 
+*/
+/* 
+p:last-child{
+  border:solid 2px blue;
+} */
+
+
+p:last-of-type{
+  border:solid 2px blue;
+}
+
+#demo{
+  /* width:300px; */
+  border:solid 1px gray;
+}
+#demo:first-letter{
+   font-size: 50px;
+   color:red;
+}
+#demo:first-line{
+   text-decoration: line-through;
+}
+
+input[type=text]:focus{
+   background: red;
+}
+</style>
+<style>
+  input:in-range{
+      background:red;
+  }
+</style>
+<style>
+   input:invalid{
+     border:solid 2px red;
+   }
+</style>
+<style>
+  :not( p ){
+     border:solid 1px blue;
+  }
+</style>
+</head>
+<body>
+<form>
+ email : <input type="email" />
+<br>
+정수 : 
+ <input type="number" min="1" max="10" value="5" />
+ <input type="submit" value="send">
+</form>
+<hr>
+<input type="text" autofocus="autofocus" />
+<div id="demo">Lorem ipsum dolor sit amet, 
+consectetur adipisicing elit. Fugit consequatur 
+ducimus illum cumque impedit accusantium 
+provident deleniti qui debitis repudiandae 
+laudantium error praesentium ut repellat fuga 
+voluptates ipsam quo porro!</div>
+
+<hr>
+<table border="1">
+ <thead>
+  <tr>
+  	<th>Lorem.</th>
+  	<th>Quisquam!</th>
+  	<th>Distinctio.</th>
+  </tr>
+  </thead>
+  <!-- tr*5>td*3>lorem1 -->
+  <tr>
+  	<td>Lorem.</td>
+  	<td>Nostrum!</td>
+  	<td>Assumenda!</td>
+  </tr>
+  <tr>
+  	<td>Lorem.</td>
+  	<td>Illum!</td>
+  	<td>Perspiciatis.</td>
+  </tr>
+  <tr>
+  	<td>Lorem.</td>
+  	<td>Harum.</td>
+  	<td>Quisquam.</td>
+  </tr>
+  <tr>
+  	<td>Lorem.</td>
+  	<td>Eligendi.</td>
+  	<td>Dolore.</td>
+  </tr>
+  <tr>
+  	<td>Lorem.</td>
+  	<td>At?</td>
+  	<td>Error.</td>
+  </tr>
+</table>
+
+<hr>
+<p>1 Lorem ipsum.</p>
+<div>
+    <div>= div box = </div>
+    <div>= div box = </div>
+    <p>div 1 . Lorem.</p>
+    <p>div 2 . Reprehenderit!</p>
+    <p>div 3 . Eos.</p>
+</div>
+<p>2 Nulla dolorem.</p>
+<p>3 Ipsam facilis!</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

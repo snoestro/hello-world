@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 5.</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+p:first-of-type {
+	border: solid 2px red;
+}
+/* p:last-child {
+	border: solid 2px blue;
+} */
+p:last-of-type {
+	border: solid 2px blue;
+}
+#demo{
+	width: 300px;
+	border: solid 1px gray;
+}
+#demo:first-letter {
+	font-size: 50px;
+	color: red;
+}
+#demo:first-line{
+	text-decoration: line-through;
+}
+input[type=text]:focus{
+	background-color: red;
+}
+input:in-range{
+	background-color: aqua;
+}
+
+</style>
+</head>
+<body>
+<form action="">    <!-- *******유효성 검사****** -->
+<input type="number" min="1" max="10" values="5"/>
+<input type="submit" value="send"/>
+</form>
+<hr />
+<input type="text" autofocus="autofocus"/>
+<div id="demo">Lorem ipsum dolor sit amet, 
+consectetur adipisicing elit. 
+Sequi iusto aliquid unde cum impedit natus 
+sit praesentium ipsum iure assumenda eaque 
+corrupti quos corporis voluptatibus veniam 
+soluta consectetur veritatis recusandae.</div>
+
+
+<hr>
+<table border="1">
+	<thead>
+	<tr>
+	  <th>Lorem.</th>
+	  <th>Pariatur.</th>
+	  <th>Dolor.</th>
+	</tr>
+	</thead>
+	<tr>
+	  <th>Lorem.</th>
+	  <th>Pariatur.</th>
+	  <th>Dolor.</th>
+	</tr>
+	<tr>
+	  <th>Lorem.</th>
+	  <th>Pariatur.</th>
+	  <th>Dolor.</th>
+	</tr>
+</table>
+
+ <p>1 Lorem ipsum.</p>
+ <div>
+ 	<p>div1 Lorem ipsum.</p>
+ 	<p>div2 Fugiat tempore.</p>
+ 	<p>div3 Mollitia veritatis.</p>
+ </div>
+ <p>2 Praesentium quis.</p>
+ <p>3 Magni molestiae.</p>
+ 
+</body>
+</html>

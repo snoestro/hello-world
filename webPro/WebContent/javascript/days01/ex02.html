@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 5.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+
+</style>
+</head>
+<body>
+
+<button id="powerbutton" onclick="poweronoff()">Turn On</button>
+<button onclick="turnon()">Turn on</button>
+<img id="pic_bulbo" src="/webPro/javascript/images/pic_bulboff.gif" alt="" />
+<button onclick="turnoff()">Turn off</button>
+
+
+
+<hr />
+
+ <button type="button" onclick="window.alert('경고창띄우기');">click me</button>
+ <button type="button" onclick="document.getElementById('demo').innerText='쉽시다.'	">click me</button>
+ <button type="button" onclick="test()">click me</button>
+
+<script>
+	function test() {
+		var message = document.getElementById('txtMsg').value;
+		//message="<span class="spn">"+message+"</span>";
+		document.getElementById('demo').innerText=message;
+	}
+</script>
+<p id="demo1"></p>
+<hr />
+메시지: <input type="text" id="txtMsg" autofocus="autofocus" placeholder="전송할메세지입력"/>
+ <button type="button" onclick="test()">click me</button>
+<p id="demo"></p>
+
+
+
+
+<script>
+  function turnon() {
+	document.getElementById("pic_bulbo").src = "/webPro/javascript/images/pic_bulbon.gif";
+  }
+  function turnoff() {
+	  document.getElementById("pic_bulbo").src = "/webPro/javascript/images/pic_bulboff.gif";
+  }
+  
+  var sw= false;
+  var bulb= document.getElementById("pic_bulbo");
+  function poweronoff(){
+	  /* if(!sw) {
+		  bulb.src = "/webPro/javascript/images/pic_bulbon.gif";
+		  sw= true;
+		  document.getElementById("powerbutton").innerText="Turn Off";
+	  }
+	  else {
+		  bulb.src = "/webPro/javascript/images/pic_bulboff.gif";
+		  sw= false;
+		  document.getElementById("powerbutton").innerText="Turn On";
+	  } */
+	  bulb.src = "/webPro/javascript/images/pic_bulb"
+	       +( sw?"off":"on")+".gif" ;	
+	  sw=!sw;
+  }
+</script>
+
+</body>
+</html>

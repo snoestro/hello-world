@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 5.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.loading{
+	height:120px;
+	width:120px;
+	border: 5px;
+	border-radius: 50%;
+	border-bottom-color:black;
+	animation:spin 1.5s linear infinite;
+}
+
+@keyframes spin{
+	0%{transform:rotate(0deg);}
+	100%{transform:rotate(360deg);}
+}
+
+.dot{
+	background-color: #bbb;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.active{
+	background-color: red;
+}
+.checked{
+	background-color: orange;
+}
+
+img{
+	width: 150px;
+	border: solid 1px #ddd;
+	border-radius: 4px;
+	padding: 5px;
+}
+img:hover{
+	box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);
+	animation: shake 0.5 infinite;
+	-webkit-animation: shake 0.5 infinite;
+}
+@keyframds shake{
+	0%{transform:translate(1px,1px); rotate(0deg)}
+	10%{transform:translate(1px,1px) rotate(0deg)}
+	20%{transform:translate(-1px,2px) rotate(-1deg)}
+	30%{transform:translate(3px,2px) rotate(1deg)}
+	40%{transform:translate(1px,-1px) rotate(0deg)}
+	50%{transform:translate(-3px,1px) rotate(1deg)}
+	60%{transform:translate(-1px,-2px) rotate(-1deg)}
+	70%{transform:translate(1px,2px) rotate(0deg)}
+	80%{transform:translate(3px,1px) rotate(1deg)}
+	90%{transform:translate(1px,-1px) rotate(-1deg)}
+	100%{transform:translate(-1px,-1px) rotate(0deg)}
+
+}
+</style>
+</head>
+<body>
+
+ <div class="loading"></div>
+ 
+ <span class="dot active"></span>
+ <span class="dot active"></span>
+ <span class="dot active"></span>
+ <span class="dot"></span>
+ <span class="dot"></span>
+ <h3>별평가</h3>
+ <span class="fa fa-star"></span>
+ <span class="fa fa-star"></span>
+ <span class="fa fa-star"></span>
+ <span class="fa fa-star"></span>
+ <span class="fa fa-star"></span>
+ <h3></h3>
+ <img src="/webPro/css/images/rocks.jpg" alt="" />
+ <img src="/webPro/css/images/rocks.jpg" alt="" />
+ <img src="/webPro/css/images/rocks.jpg" alt="" />
+ <img src="/webPro/css/images/rocks.jpg" alt="" />
+ <img src="/webPro/css/images/rocks.jpg" alt="" />
+ <img src="/webPro/css/images/rocks.jpg" alt="" />
+ 
+</body>
+</html>
