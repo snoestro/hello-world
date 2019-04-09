@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 9.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ 
+국어 : <input type="text" id="kor" autofocus="autofocus" onkeyup="set_nextfocus(this,'eng');" /><br>
+영어 : <input type="text" id="eng" onkeyup="set_nextfocus(this,'mat');"/><br>
+수학 : <input type="text" id="mat" onkeyup="n3_keyup();"/><br>
+총점 : <input type="text" id="tot" disabled="disabled" /><br>
+평균 : <input type="text" id="avg" disabled="disabled" /><br>
+
+
+<!-- 
+조건)
+1. 국어,영어,수학   0<=  <=100 정규표현식으로 유효성 검사
+2. 평균 소수점 2자리
+3. 수학 입력 후 엔터치면 총점,평균 계산해서 출력. -->
+<script>
+ function scoreCheck(score) {
+	var pattern = /^(100|[1-9]?\d$)/;
+	return pattern.test(score);
+}
+ 
+ function set_nextfocus(txt, id) {
+	if (event.keyCode==13) {
+		if (!scoreCheck(txt.value)) {
+			alert("점수입력잘못");
+			txt.focus();
+			txt.select();
+			return;
+		}
+		var nextElement = document.getElementById(id);
+		nextElement.focus();
+		nextElement.select();
+	}
+}
+</script>
+<script>
+var kor = document.getElementById("kor");
+var eng = document.getElementById("eng");
+var mat = document.getElementById("mat");
+var tot = document.getElementById("tot");
+var avg = document.getElementById("avg");
+var pattern = /^([0-9]|[1-9][0-9]|100)$/;
+
+function n1_keyup() {
+	if (event.keyCode == 13){		
+			if (!pattern.test(kor.value)){
+				alert("입력잘못");
+				kor.focus();
+				kor.select();
+				return;
+			}
+		eng.focus();
+	}	
+}
+function n2_keyup() {
+	if (event.keyCode == 13){
+			if (!pattern.test(eng.value)){
+				alert("입력잘못");
+				eng.focus();
+				eng.select();
+				return;
+			}
+			mat.focus();
+			
+	}	
+}
+function n3_keyup() {
+	if (event.keyCode == 13){
+			if (!pattern.test(mat.value)){
+				alert("입력잘못");
+				mat.focus();
+				mat.select();
+			}
+			tot.value = parseInt(kor.value) + parseInt(eng.value) + parseInt(mat.value);
+			avg.value = Math.round((tot.value/3)*100)/100;
+			event.
+	}	
+}
+
+</script> 
+</body>
+</html>

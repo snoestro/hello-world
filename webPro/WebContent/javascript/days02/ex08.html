@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 8.</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+
+</style>
+</head>
+<body>
+숫자입력 : <input type="text" id="num" onkeydown="num_keydown()"/>
+<p id= "demo"></p>
+ <br />
+ Email <input type="text" id="email" onkeydown="email_keydown();"/>
+ <br />
+ Pass <input type="text" id="pass"/>
+ 
+</body>
+
+ <script>
+ 	var num= document.getElementById("num");
+ 	         /* document.getElementById("num2"); */
+ 	function num_keydown() {
+ 		if (event.keyCode==13) {
+ 			var pattern = /^[0-9]+$/;
+ 			if (!pattern.test(num)){
+ 				alert("입력잘못");
+ 			}
+		}
+	}
+ 	
+ 	var email = document.getElementById("email").value;
+ 	function email_keydown() {
+		
+ 		if (event.keyCode == 13){
+ 			var pattern1 = /^\S+@\S+$/i;
+ 			if (!pattern1.test(email)){
+ 				alert("입력잘못");
+ 			}
+ 		}
+ 		
+	}
+ 	
+ 	
+ </script>
+</html>

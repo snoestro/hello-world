@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 9.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+ .focus {
+ 	background-color: yellow;
+ }
+ .blur{
+ 	background-color: white;
+ }
+</style>
+</head>
+<body>
+
+ <input type="text" autofocus="autofocus"/><br />
+ <input type="text" /><br />
+ <input type="text" /><br />
+ <input type="text" /><br />
+ <input type="text" /><br />
+ 
+<script>
+	$("input")
+	.focus(function () {
+		$(this).addClass("focus");
+	})
+	.blur(function () {
+		$(this).removeClass("focus")
+	})
+	.hover(function() {
+		$(this).css("border","solid 1px red")
+		}, function() {
+			$(this).css("border","solid 1px gray")
+		})
+	
+</script> 
+</body>
+</html>

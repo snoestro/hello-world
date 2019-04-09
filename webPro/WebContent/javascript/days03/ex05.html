@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 9.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ 
+ <button id="btn">버튼</button>
+ <p id="demo"></p>
+ <script>
+ 	window.addEventListener("resize", function () {
+		document.getElementById("demo").innerHTML = "width:" +window.innerWidth + "px  height:" +window.innerHeight+"px";
+	} )
+ 	
+	var btn = document.getElementById("btn");
+	if (btn.addEventListener) {
+		btn.addEventListener("click", test)
+	} else {
+		btn.attachEvent("onclick", test)
+	}
+	 
+	function test() {
+		alert("test")
+		btn.innerHTML = "클릭안됨";
+		if (btn.addEventListener) {
+		btn.removeEventListener("click", test)
+		} else {
+		btn.dettachEvent("onclick", test)
+		}
+		} 
+ </script>
+</body>
+</html>

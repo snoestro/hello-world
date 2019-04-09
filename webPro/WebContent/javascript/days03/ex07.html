@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 9.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+div{
+	padding: 50px;
+	border: solid 1px gray;
+}
+#out{
+	background-color: orange;
+}
+#in{
+	background-color: yellow;
+}
+
+</style>
+</head>
+<body>
+<!-- 이벤트 버블링 -->
+<div id="out">out
+   <div id="in">in</div>
+</div> 
+
+
+<script>
+
+document.getElementById("out").addEventListener("click", function() {
+	alert("out div 클릭됨");
+},true); //이벤트 버블링, 캡쳐링 boolean형 설정값
+document.getElementById("in").addEventListener("click", function() {
+	alert("in div 클릭됨");
+	event.stopPropagation();
+},true);
+</script>
+</body>
+</html>

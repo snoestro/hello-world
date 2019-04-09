@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 9.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ 찾을대상(source)
+ <textarea name="" cols="30" rows="10" id="s"></textarea><br />
+ 찾을문자열(search)
+ <input type="text" id="search" value="name" onkeydown="search_keydown();"/><br>
+ <p id="demo"></p>
+</body>
+<script>
+var x = "hello 'world'~"; //문자열
+var x = 'hello "world~"'; //문자열
+
+var x="hello \"world~\"";
+//document.write(x.length);
+//document.write(x);
+// \" \n \f \r \t 제어문자 사용 가능
+//alert("hello \n world");
+// document.getElementById("demo").innerHTML="hello"+" world";
+
+ var name1 = "admin"; //String type
+ var name2 = new String("admin"); // object type
+ var name3 = new String("admin"); // object type
+// if (name1==name2) alert("same");
+// if (name1===name2) alert("same"); // = = = 세개 타입이 같은지까지도 비교함
+// else alert("diff");
+ 
+ //alert(name2 == name3); //false
+ //alert(name2 === name3); //false
+ //***************js에서 두 객체를 비교하면 항상 false****************
+ 
+ var source ="var name2 = new String(\"admin\"); "
+ 			+"alert(name2 == name3); "+"alert(name2 === name3);";
+ var search = "new";
+/*  var idx = source.indexOf("kkk"); //없으면 -1 있으면 위치 인덱스 start from 0
+ alert(idx); */
+ 
+ document.getElementById("s").innerText = "var name2 = new String(\"admin\"); "
+		+"alert(name2 == name3); "+"alert(name2 === name3);";
+
+ var idx = -1;
+ 
+
+
+ 
+ 
+ 
+</script>
+</html>

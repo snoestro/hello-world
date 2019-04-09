@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 9.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ <button id="btn2" onclick="window_load();">이벤트처리2</button>
+ <button id="btn3" onclick="window_load();">이벤트처리3</button>
+ 
+</body>
+ <script>
+ function window_load() {
+	// element.addEventListener(type, function(e) {}, capture)
+	                 // 1)이벤트 유형 ex click 2)함수 3)이벤트버블링 또는 캡처를 사용할지 여부 boolean
+	document.getElementById("btn3").addEventListener("click", function () {
+		alert("동적으로 등록된 2번째 함수...")
+	});
+ 	document.getElementById("btn2").onclick = function(){
+		alert("무명메서드등록")
+	};
+}
+ </script>
+</html>
