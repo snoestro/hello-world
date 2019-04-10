@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 10.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ 
+ 
+ <script>
+ var m =[];
+ //m 10개의 정수를 랜덤하게 저장. (0~100사이)
+ for (var i = 0; i < 10; i++) {
+	m[i]=Math.round(Math.random()*100);
+ }
+
+ m.sort(function (a,b) {
+	return a-b;
+});
+ document.write(m+"<br>");
+ var idx=0;
+ for (var i = 0; i < 10; i++) {
+		if (m[i]>=30) {
+			idx=i;
+			break;
+		}
+	 } 
+ var n=[];
+ 
+ for (var i = 0; i < 10-idx; i++) {
+	n[i]=m[idx+i];
+ }
+ document.write(n+"for문 <br>");
+ var x = m.filter(function(v, i, array) {
+ 	return v%2==0;
+ })
+ document.write(x+"filter문 <br>");
+ //30보다 큰수를 배열 n에 담아 출력
+ </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+</style>
+</head>
+<body>
+숫자 입력 : <input type="text" id="numbers" value="3,5,2,4,1" /><br>
+<button id="btnexec">실행</button>
+<p id="demo"></p>
+<script>
+  // [html DOM] 
+  // document.getElementById("btnexec").onclick = function (){}
+  var btn = document.getElementById("numbers");
+
+  var m = btn.value.split(',');		 
+  document.write( m.toString());
+  document.write( "입력\n");
+  m.sort();		  
+  document.write( m.toString());
+  document.write( "정렬\n");
+  document.getElementById("btnexec").addEventListener("click"
+        ,function (){
+	  
+	  
+      
+    	 // alert("클릭.")
+     	} );
+</script>
+
+<hr>
+<script>
+  /* js 배열 */
+  /* java 배열 :   int [] m = new int[10]   
+   *                    int [] m = {1,2,3};
+   */
+  
+  // var m = new Array();   //  var m = [];
+  var m = new Array(1,2,3); // var m = [  1,  2,  3 ]; 
+  /* 배열크기 */
+  document.write( m.length +"<br>");
+  document.write( m[0] +"<br>");
+  m[1] = 100;
+  document.write( m[1] +"<br>");
+  document.write( m[2] +"<br>");
+  // alert( typeof m );  // object
+  
+  m[3] = Date.now;
+  document.write( m[3] +"<br>");  
+  m[4] = 4;
+  document.write( m[4] +"<br>");
+ 
+  
+</script>
+
+<script>
+   document.write("-".repeat(10));
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

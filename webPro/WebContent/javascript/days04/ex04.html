@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 10.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<input type="text" id="data"  value="xxx" onkeydown="data_keydown();"/>
+
+
+<script>
+
+var points =[3,5,2,4,1];
+//alert(Array.isArray(points));      //true
+//alert(typeof points);              //object
+//alert(points instanceof Array);   //true
+//points.push(100);
+
+//points.splice(1,2,100,200); //3,100,200,4,1
+points.splice(1,1); //3,2,4,1 삭제하고 삽입 안함
+//alert(points.toString());
+
+function data_keydown() {
+	if (event.keyCode ==13) {
+		var data = event.srcElement.value;
+		points.unshift(data);
+	/* 	alert(points.toString()); */
+	}
+}
+
+var arr1 = [1,2,3];
+var arr2 = [100,200];
+var arr3 = [4,5];
+//두배열 병합 concat() 합친 배열을 반환하고 원래배열은 유지
+
+var conarr = arr1.concat(arr2,arr3);
+//alert(conarr);
+
+/* points.shift(); // 0번째 요소 제거
+alert(points.toString());
+points.shift();
+alert(points.toString());
+points.pop(); //마지막 요소 제거
+alert(points.toString());
+points.pop();
+alert(points.toString()); */
+
+</script>
+<script>
+// 배열 자르기
+
+var points = [1,2,3,4,5];
+var arr = points.slice(2,5);
+// alert(arr);
+
+</script>
+ 
+</body>
+</html>
