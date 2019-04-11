@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+</head>
+<body>
+<!-- string/array -->
+<!-- js 날짜 시간 -->
+<!-- js - 브라우저의 시간대를 사용
+Date 날짜 객체 
+1) new Date()
+2) new Date(year, month, day, hours, minutes, seconds)
+3) new Date(milliseconds)
+4) new Date(날짜 문자열)
+-->
+<p id="demo"></p>
+<script>
+var d = new Date();
+var d = new Date(2018,12-1,21);
+var d = new Date(2018,12-1);
+var d = new Date(2018);
+// 이전 세기 (19년대)
+var d = new Date(99, 12-1, 21);
+var d = new Date(19, 12-1, 21);
+var d = new Date("2019/04/10");
+document.getElementById("demo").innerHTML= d;
+document.getElementById("demo").innerHTML= d.toDateString();
+document.getElementById("demo").innerHTML= d.toTimeString();
+document.getElementById("demo").innerHTML= d.toLocaleTimeString();
+
+//$('#demo').html(d);
+</script>
+</body>
+</html>

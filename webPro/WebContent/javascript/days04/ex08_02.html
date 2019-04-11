@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 10. - 오후 2:14:47  k≡n¡k</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+    /* 
+    body{
+       background-color: aqua;
+    }
+    */
+</style>
+</head>
+<body>
+
+</select>
+
+<script>
+  // ex08.html 코딩을 jquery 작성
+  var $bgcolor = $( "<select id='bgcolor'></select>" ); 
+  $('body').append($bgcolor);
+   
+  var colors = ["white", "red", "green", "blue"];  
+  for (var i = 0; i < colors.length; i++) {
+	    $("#bgcolor").append("<option>"+ colors[i] +"</option>");
+  }
+  
+  // click
+  // ready
+  // hover
+  // mouseout, mouseover
+  $('#bgcolor').change(function (){
+	  //$(this).val();
+	  //$(this).text();
+	  document.bgColor = $(this).val();
+  });
+  
+</script>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

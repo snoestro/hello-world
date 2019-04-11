@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 11.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ <ul class="days"></ul>
+ 
+ 
+ <script>
+ function getLastDay(year,month) {
+	var d= new Date(year,month);
+	d.setDate(0);
+	return d.getDate();
+}
+ </script>
+ <script>
+ 
+ var current_year = 2019;
+ var current_month = 4;
+ var lastDay = getLastDay(current_year,current_month);
+ //동적으로 li태그를 만들어 ul테그에 추가
+ for (var i = 1; i <= lastDay; i++) {
+	 $("ul.days").append("<li>"+i+"</li>");
+}
+	 
+	 
+	 
+	 
+ 
+ </script>
+</body>
+</html>
