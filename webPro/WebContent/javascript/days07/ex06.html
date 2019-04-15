@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 15.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ 
+ 
+<script>
+function Hello(name) {
+	  this._name = name;
+	}
+
+Hello.prototype.say = function() {
+	  console.log('Hello, ' + this._name);
+	}
+	
+var hello1 = new Hello('승민');
+var hello2 = new Hello('현섭');
+var hello3 = new Hello('유근');
+
+hello1.say(); // 'Hello, 승민'
+hello2.say(); // 'Hello, 현섭'
+hello3.say(); // 'Hello, 유근'
+
+hello1._name = 'anonymous';
+hello1.say();
+
+
+</script> 
+</body>
+</html>

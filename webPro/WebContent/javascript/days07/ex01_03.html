@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 15.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+span{
+	color:red;	
+}
+</style>
+</head>
+<body>
+
+<form id ="form1" name="form1" action="ex01_ok.jsp" method="post" >
+ Name: <input type="text" id="fname" name="fname" autofocus="autofocus"/>
+ <span></span>
+ <br>
+ <input type="submit" />
+ </form>
+ 
+
+<script>
+
+	$("#form1").submit(function () {
+		if ($("#fname").val()=="") {
+			//alert("필수입력");
+			$("span").text("*필수입력사항").show().fadeOut(1000);
+			event.preventDefault();
+		}
+	})
+</script>
+<script>
+
+
+
+</script>
+</body>
+</html>

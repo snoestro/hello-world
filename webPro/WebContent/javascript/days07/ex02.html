@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 15.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ 
+ 
+<script>
+//[Js data type]
+// String, number, boolena, object, function, null, undefined
+//[Js 객체 만들기
+
+/* var person = new Object();
+person.firstName="John"; */
+
+var person ={
+	firstName:"john",
+	lastName:"doe",
+/* 	fullname: function() {
+		return this.firstName +" "+this.lastName;
+	} */
+	language: "en";
+	get lang(){
+		return this.language.toUpperCase();
+	}
+	set lang(lang){
+		this.language = lang.toUpperCase();
+	}
+}; 
+
+console.log(person.firstName);
+console.log(person["lastName"]);
+
+
+var m = [3,5,2,4,1];
+for ( var n in m) {
+	console.log(m[n]);
+}
+//속성추가
+person.grade='a';
+
+//객체 새 메서드 추가.
+person.fullName = function () {
+	return this.firstName +" "+this.lastName;
+}
+
+var name = person.fullName;
+console.log(name);
+console.log(person.fullName());
+
+/* for ( var x in person) {
+	console.log(person[x]);
+}	 */
+
+</script> 
+</body>
+</html>

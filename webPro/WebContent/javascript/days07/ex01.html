@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 15.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<script>
+function validateForm() {
+	//var fname = document.getElementById("fname").value;
+	//$("#fname").val();
+	//var fname = document.forms["form1"]["fname"].value;
+	var fname = document.getElementById("fname").value;
+	
+	if (fname.trim()==""){ 
+		alert("필수입력");
+		return false;
+	}
+}
+
+</script>
+<form name="form1" action="ex01_ok.jsp" method="post" onsubmit="return validateForm()">
+ Name: <input type="text" id="fname" name="fname" autofocus="autofocus"/>
+ <br>
+ <input type="submit" />
+ </form>
+ 
+</body>
+</html>
