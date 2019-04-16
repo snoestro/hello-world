@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 16.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+table{
+	width: 50%;
+	margin: 0 auto;
+	
+}
+table, td, th{
+	border: solid 1px gray;
+}
+table>thead>tr:first-child {
+	background-color: gray;
+	color: white;
+}
+tr>td:first-child {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<table id="table">
+   <thead>
+	<tr>
+		<th><input type="checkbox" name="checkbox" id="7369" />Lorem.</th>
+		<th>Nihil.</th>
+		<th>Rerum!</th>
+	</tr>
+	</thead>
+	 <tbody id="tbody">
+	   <tr>
+	   	<td><input type="checkbox" name="checkbox" id="7370"/>Lorem.</td>
+	   	<td>Quod?</td>
+	   	<td>Quia.</td>
+	   </tr>
+	   <tr>
+	   	<td><input type="checkbox" name="checkbox" id="7382"/>Lorem.</td>
+	   	<td>Officiis!</td>
+	   	<td>Tempora.</td>
+	   </tr>
+	   <tr>
+	   	<td><input type="checkbox" name="checkbox" id="7400"/>Lorem.</td>
+	   	<td>Et?</td>
+	   	<td>Commodi.</td>
+	   </tr>
+	 </tbody>
+	 <tfoot>
+	   <tr>
+	    <td colspan="3">
+	 	 <input type="button" id="empAdd" value="사원추가"/>
+	 	 <input type="button" id="empDelete" value="사원삭제"/>
+	 	 <input type="button" id="empEdit" value="사원수정"/>
+	    </td>
+	   </tr>
+	 </tfoot>
+</table>
+<p id="demo"></p>
+<script>
+
+//return elelment - document.getElementById(id)
+//return nodeList - document.getElementsByClassName(name)
+//return HTML Collection - document.getElementsByName(name)
+//return nodeList - document.getElementsByTagName(tagName)
+
+document.getElementById("empAdd").onclick = function() {
+  var table = document.getElementById("tbody");
+  var row = table.insertRow(table.rows.length);
+  var txt1 = document.createElement("input");
+  txt1.width="130px";
+  var txt2 = document.createElement("input");
+  txt2.width="130px";
+  var txt3 = document.createElement("input");
+  txt3.width="130px";
+  
+  
+  var cell = row.insertCell(0);
+  	cell.appendChild(txt1);
+  var cell1 = row.insertCell(1);
+  	cell1.appendChild(txt2);
+  var cell2 = row.insertCell(2);
+  	cell2.appendChild(txt3);
+}
+
+//수정 클릭
+$("#empEdit").click(function () {
+	var input = document.createElement("input");
+	input.type = "text";
+	$("tbody :checked").append(input);
+}) 
+
+
+
+$("tbody :checkbox").click(function () {
+	var head = document.querySelector("thead input[type=checkbox]");
+	if (this.checked==false) head.checked = false;
+}) 
+
+document.querySelector("[name=checkbox]").onclick = function () {
+	var ckblist = document.querySelectorAll("tbody [type=checkbox]");
+	for (var i = 0; i < ckblist.length; i++) {
+		ckblist[i].checked = this.checked; 	
+	}
+} 
+
+/* document.querySelector("tbody [type=checkbox]").onclick = function () {
+	//var ckblist = document.querySelectorAll("tbody [type=checkbox]");
+	var head = document.querySelector("thead input[type=checkbox]");
+	//for (var i = 0; i < ckblist.length; i++) {
+		if (this.checked==false) {
+			head.checked = false;
+	//	}
+	}
+}  */
+
+document.getElementById("empDelete").onclick = function () {
+	var ckblist = document.querySelectorAll("tbody [type=checkbox]");
+	var delList = "";
+	for (var i = 0; i < ckblist.length; i++) {
+		if (ckblist[i].checked) {
+			delList += ckblist[i].id;
+		}
+	}
+	var demo = document.getElementById("demo");
+	demo.innerHTML = delList;
+}
+
+
+
+
+
+/* var checkbox = document.getElementsByName("checkbox");
+function check_all() {
+	if (!checkbox[1].checked) {
+		for(i=0; i < checkbox.length; i++) {
+			checkbox[i].checked = true;
+		}
+	} else {
+		for(i=0; i < checkbox.length; i++) {
+			checkbox[i].checked = false;
+		}
+	}
+} */
+
+
+</script>
+</body>
+</html>

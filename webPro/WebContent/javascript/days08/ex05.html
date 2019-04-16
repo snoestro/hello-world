@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 16.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+<form action="" id="form1">
+Name:  <input type="text" name="name" value="admin"/>
+<br>
+Age :  <input type="text" name="age" value="20"/>
+<br>
+Email: <input type="email" name="email" value="admin@naver.com"/>
+<br />
+<button type="button">확인</button>
+</form>
+<p id="demo"></p>
+
+
+<script>
+$("button").click(function() {
+	var form = document.forms["form1"]
+	//alert(form.elements.length);
+	var output = "";
+	for (var i = 0; i < form.elements.length; i++) {
+		output+= form.elements[i].value+"<br>";
+	}
+	$("#demo").html(output);
+})
+
+</script>
+</body>
+</html>

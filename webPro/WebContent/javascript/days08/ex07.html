@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 16.</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+#container{
+   width:700px;
+   height:500px;
+   position: relative;
+   background-color: green;
+   border:solid 1px gray;
+}
+#animate{
+  width:50px;
+  height:50px;
+  position: absolute;
+  background: red;
+  border:solid 1px gray;
+  border-radius:50%;
+  
+  left:30px;
+  top:10px;
+}
+*{
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<!-- js animation È¿°ú -->
+<p><button onclick="move();">Click Me</button></p>
+<div id="container">
+	<div id="animate"></div>
+</div>
+<script>
+  function move(){
+	  var elem = document.getElementById("animate");
+	  var mx = 4; 
+	  var my = 8;
+	  var ms = 10;
+	  var timer = setInterval(function() {
+		  var left = elem.offsetLeft;
+		  var top = elem.offsetTop;
+		  console.log(left +", " + top);
+          
+          var leftWidth = $("#container").width() -  $("#animate").width();
+          var toHeight = $("#container").height() -  $("#animate").height();
+
+         if(left >= leftWidth || left <= 0){ my*=(-1); }
+         else if(top >= toHeight || top <= 0){ mx*=(-1);}
+	         
+	    elem.style.top  = elem.offsetTop+ mx + "px";
+	    elem.style.left  = elem.offsetLeft + my + "px";
+	     	  
+	  }, ms);
+  }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

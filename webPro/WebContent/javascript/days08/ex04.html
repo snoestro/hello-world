@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 16.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ <!-- 
+[ js   HTML DOM ]
+1. 브라우저가 요청한 후 응답받은 웹 페이지를 로딩할 때
+    DOM 객체 생성
+2. js 사용해서   모든 요소에 접근하고 변경..............
+3.        document   node(노드)
+           
+          html ( root element )      (루트노드)
+     
+ head          body
+ 
+ title  <title id=''>제목</title>
+   
+ text   제목  node     id속성  node
+ 
+ 4. DOM + js
+    ㄱ. html 요소를 변경
+    ㄴ. html 속성을 변경
+    ㄷ. css 스타일을 변경
+    ㄹ. 요소 +  속성  제거, 추가
+    ㅁ. html 요소의 이벤트 처리.
+    등등 .. 
+ 5. w3c 협회에 구분하는 3가지 DOM
+    ㄱ. Core DOM  - 모든 파일의 표준 모델(DOM)
+    ㄴ. HTML DOM - html 파일을 DOM
+    ㄷ. XML DOM    - xml 파일을  DOM
+ 6. html dom 문서객체: document객체
+    ㄱ. 웹페이지를 나타냄
+    ㄴ. html요소를 접근하기 위해서는 document 객체에 접근 
+ -->  
+ 
+ <p id="demo"></p>
+ <script>
+ // document.getElementby ID name tag class
+ var demo = document.getElementById("demo");
+ demo.innerHTML = "<span color='red'>test</span>";
+ // 2. element.attribute
+ // 3. element.style.property
+ // 4. elemant.setAttribute(name, value)
+ // [html 요소 추가 삭제]
+    // document.createElement(tagName)
+    // document.appendChild(newNode)
+    // document.removeChild(oldNode)
+    // document.replaceChild(newChild, oldChild)
+ 
+ // 이벤트핸들러 등록
+ // document.getElementById(id).onclick = function name() {}
+ 
+ // document.forms
+ // document.images[] img 집합
+ // document.links[]  a 집합
+ 
+ 
+ </script>
+ 
+</body>
+</html>

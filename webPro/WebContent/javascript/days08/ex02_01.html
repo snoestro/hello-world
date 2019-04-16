@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 16.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+table{
+	width: 50%;
+	margin: 0 auto;
+	
+}
+table, td, th{
+	border: solid 1px gray;
+}
+table>thead>tr:first-child {
+	background-color: gray;
+	color: white;
+}
+tr>td:first-child {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<table>
+   <thead>
+	<tr>
+		<th><input type="checkbox" name="checkbox" id="7369" />Lorem.</th>
+		<th>Nihil.</th>
+		<th>Rerum!</th>
+	</tr>
+	</thead>
+	 <tbody>
+	   <tr>
+	   	<td><input type="checkbox" name="checkbox" id="7370"/>Lorem.</td>
+	   	<td>Quod?</td>
+	   	<td>Quia.</td>
+	   </tr>
+	   <tr>
+	   	<td><input type="checkbox" name="checkbox" id="7382"/>Lorem.</td>
+	   	<td>Officiis!</td>
+	   	<td>Tempora.</td>
+	   </tr>
+	   <tr>
+	   	<td><input type="checkbox" name="checkbox" id="7400"/>Lorem.</td>
+	   	<td>Et?</td>
+	   	<td>Commodi.</td>
+	   </tr>
+	 </tbody>
+	 <tfoot>
+	   <tr>
+	    <td colspan="3">
+	 	 <input type="button" id="empAdd" value="사원추가"/>
+	 	 <input type="button" id="empDelete" value="사원삭제"/>
+	 	 <input type="button" id="empEdit" value="사원수정"/>
+	    </td>
+	   </tr>
+	 </tfoot>
+</table>
+<p id="demo"></p>
+<script>
+
+$("thead :checkbox").click(function () {
+	//alert($(this).prop("checked"))
+	//alert($(this).is("checked"));
+	$("tbody :checkbox").attr("checked", $(this).prop("checked"));
+})
+
+$("#empDelete").click(function() {
+	var id = [];
+	$("tbody :checked").each(function() {
+		id.push($(this).attr("id"));
+	})
+	$("#demo").html(id.toString());
+	alert(id.toString());
+})
+
+</script>
+</body>
+</html>

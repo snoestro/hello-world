@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 16.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+   .myDiv{
+      background-color: #f1f1f1;
+      text-align: center;
+      border:solid 1px #d3d3d3;
+      
+      position: absolute;
+      z-index: 9;
+   }
+   .myDivHeader{
+      padding: 10px;
+      cursor: move;
+      z-index: 10;
+      background-color: #2396f3;
+      color:#fff;
+   }
+</style>
+</head>
+<body>
+
+<div id="myDiv1" class="myDiv">
+	<div id="myDiv1Header" class="myDivHeader">Click Hear</div>
+	<p>DragDrop</p>
+	<p>DragOver</p>
+	<p>Div</p>
+</div>
+ 
+ 
+<script>
+function draggable( elem ){
+	   
+	var pos1=0, pos2=0; // x, y
+	var pos3=0, pos4=0; // x, y
+	document.getElementById( elem.id+"Header" ).onmousedown = dragMouseDown;
+	   // 클로져(내장함수)
+	   function dragMouseDown(e){
+		   e = e || window.event;
+		   
+		   pos3 = e.clientX;
+		   pos4 = e.clientY;
+		   
+		   document.onmousemove = elementDrag;
+		   document.onmouseup = closeDragElement;
+	   }
+	   
+	   function elementDrag(e){
+		   e = e || window.event;
+		   pos1 = pos3 - e.clientX;
+		   pos2 = pos4 - e.clientY;
+		   elem.style.left = ( elem.offsetLeft - pos1) +"px";
+		   elem.style.top = ( elem.offsetTop - pos2) +"px";		   
+		   pos3 = e.clientX;
+		   pos4 = e.clientY;
+		   
+	   }
+	   function closeDragElement(e){
+		   document.onmousemove = null;
+		   document.onmouseup = null;
+	   } 
+}
+</script> 
+</body>
+</html>

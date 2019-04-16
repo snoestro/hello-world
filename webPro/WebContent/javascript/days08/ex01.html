@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 16.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.box{
+	position: absolute;
+}
+</style>
+</head>
+<body>
+ 
+<script>
+function getRandomInt(min, max) {
+	return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+document.oncontextmenu = function () {
+	return false;
+}
+
+document.onmousedown = function () {
+	// console.log(event.button);
+	// 왼쪽버튼 0 가운데 1 오른쪽 2
+	if (event.button==0) {
+		document.title = event.clientX+ ", "+event.clientY;
+		var img = document.createElement("img");
+		var url = "/webPro/javascript/images/item0"+getRandomInt(1,9)+".gif";
+		img.setAttribute("src", url);
+		document.body.appendChild(img);
+		img.classList.add("box");
+		img.style.left = (event.clientX-(img.height/2))+"px";   //*************px
+		img.style.top = (event.clientY+-(img.width/2))+"px";
+	} else if (event.button==2) {
+		var result = confirm("삭제할까요?");
+		if (result) {
+			document.body.removeChild(event.srcElement);
+		}
+	} else if (event.button==1) {
+		//var img = document.getElementsByTagName("img"); 지우기
+
+		}
+	}
+}
+
+
+document.onmousemove = function () {
+	//console.log(event.button);
+	//document.title = event.clientX+ ", "+event.clientY;
+	 
+}
+
+
+</script> 
+</body>
+</html>
