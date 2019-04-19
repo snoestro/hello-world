@@ -24,6 +24,19 @@
   
   left:30px;
   top:10px;
+  
+}
+#score{
+  width:50px;
+  height:50px;
+  position: absolute;
+  background: black;
+  border:solid 1px gray;
+  /* border-radius:50%; */
+  
+  left:300px;
+  top:200px;
+  z-index: 
 }
 *{
   box-sizing: border-box;
@@ -31,31 +44,64 @@
 </style>
 </head>
 <body>
-<!-- js animation È¿°ú -->
+
 <p><button onclick="move();">Click Me</button></p>
 <div id="container">
 	<div id="animate"></div>
+	<div id="score"></div>
 </div>
 <script>
+var cnt = 1;
   function move(){
 	  var elem = document.getElementById("animate");
-	  var mx = 4; 
+	  var mx = 5; 
 	  var my = 8;
 	  var ms = 10;
+	  var max2 = 100;
 	  var timer = setInterval(function() {
 		  var left = elem.offsetLeft;
 		  var top = elem.offsetTop;
-		  console.log(left +", " + top);
-          
+		  console.log(left +", " + top+", "+cnt);
+
           var leftWidth = $("#container").width() -  $("#animate").width();
           var toHeight = $("#container").height() -  $("#animate").height();
 
-         if(left >= leftWidth || left <= 0){ my*=(-1); }
-         else if(top >= toHeight || top <= 0){ mx*=(-1);}
+         if( (left+25) >= leftWidth || left <= 0){
+        	 cnt+=1;
+        	 if ( (left+25) <= 0) {
+        		 mx = Math.round(Math.random()*10);
+        		 my = my>0?Math.round(Math.sqrt(max2-Math.pow(mx,2))):Math.round(Math.sqrt(max2-Math.pow(mx,2)))*(-1);
+			 } else {
+        		 mx = Math.round(Math.random()*10)*(-1);
+        		 my = my>0?Math.round(Math.sqrt(max2-Math.pow(mx,2))):Math.round(Math.sqrt(max2-Math.pow(mx,2)))*(-1);
+			 }
+         }
+         else if( (top+25) >= toHeight || top <= 0){
+        	 cnt+=1;
+        	 if (top <= 0) {
+        		 my = Math.round(Math.random()*10);	
+        		 mx = mx>0?Math.round(Math.sqrt(max2-Math.pow(my,2))):Math.round(Math.sqrt(max2-Math.pow(my,2)))*(-1);
+			 } else {
+        		 my = Math.round(Math.random()*10)*(-1);	
+        		 mx = mx>0?Math.round(Math.sqrt(max2-Math.pow(my,2))):Math.round(Math.sqrt(max2-Math.pow(my,2)))*(-1);
+			 }
+        } 
+         
+        if(left>="300" && left<="350" && 
+            top>="200" && top<="250") {
+        	clearInterval(timer);
+        	alert("Score: "+cnt);
+        	cnt=1;
+        	elem.style.left = 0;
+        	elem.style.top = 0; 
+        }
+        		
+        
 	         
-	    elem.style.top  = elem.offsetTop+ mx + "px";
-	    elem.style.left  = elem.offsetLeft + my + "px";
-	     	  
+	    elem.style.left  = left + mx + "px";
+	    elem.style.top  = top+ my + "px";
+	     
+
 	  }, ms);
   }
 </script>

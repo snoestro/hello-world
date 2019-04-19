@@ -25,7 +25,7 @@ tr>td:first-child {
 </style>
 </head>
 <body>
-<table id="table">
+<table id="x">
    <thead>
 	<tr>
 		<th><input type="checkbox" name="checkbox" id="7369" />Lorem.</th>
@@ -62,6 +62,11 @@ tr>td:first-child {
 </table>
 <p id="demo"></p>
 <script>
+
+var tba = document.getElementById("table");
+console.log(tba.firstChild.nextSibling.nextSibling.nextSibling.childNodes[5].childNodes[3].textContent);
+//console.log(tba.firstChild.nextSibling.nextSibling.nextSibling.childNodes[5].childNodes[4].textContent);
+console.log(tba.firstChild.nextSibling.nextSibling.nextSibling.childNodes[5].childNodes[5].textContent);
 
 //return elelment - document.getElementById(id)
 //return nodeList - document.getElementsByClassName(name)

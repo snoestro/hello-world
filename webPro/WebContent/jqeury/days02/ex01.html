@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 19.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+span {
+    background: #def3ca;
+    padding: 3px;
+    float: left;
+  }
+</style>
+</head>
+<body>
+<script>
+$(document).ready(function () {
+	$( "#hider" ).click(function() {
+		//hide(duration, callback함수 [완료후 자동 호출])
+		$( "span:last-child" ).hide( "fast", function() {
+		    // Use arguments.callee so we don't need a named function
+		$( this ).prev().hide( "fast", arguments.callee );
+		  });
+		});
+		
+		$( "#shower" ).click(function() {
+		  $( "span:first-child" ).show( "fast", function () {
+			$(this).next().show("fast",arguments.callee);
+		} );
+		});
+});
+</script>
+ <!-- 
+ 1.jquery
+ 2. xx.min.js 다운로두
+   cdn 구글 ms 서버 호스팅
+ 3. $(selector).action()
+ 4. $(document).ready(function(){});
+    $(function(){});
+    window.onload = function(){}
+    
+  -->
+ 
+<button id="hider">Hide</button>
+<button id="shower">Show</button>
+<div>
+  <span>Once</span> <span>upon</span> <span>a</span>
+  <span>time</span> <span>there</span> <span>were</span>
+  <span>three</span> <span>programmers...</span>
+</div>
+ 
+</body>
+</html>

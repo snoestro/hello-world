@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 17.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<!-- bom location -->
+location : 현재페이지 url 주소에 대한 정보를 갖는 객체 
+<button onclick="btn_move();">페이지이동</button>
+
+<script>
+console.log(location.hostname); //도메인 이름 localhost
+console.log(location.pathname); //"/webPro/javascript/days09/ex10.html" 
+
+function btn_move() {
+	//alert(location.href);
+	location.href = "ex11.html";
+	//location.assign("http://www.naver.com");
+}
+</script>
+</body>
+</html>

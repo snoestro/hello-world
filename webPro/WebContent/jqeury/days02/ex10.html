@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 19.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+비밀번호: <input type="password" /><br>
+<p id="demo">경고! Caps lock is On</p>
+
+<script>
+$("p#demo").css("color","red").hide();
+
+$("input").keyup(function(e) {
+    var result = $(this).val();
+/* 
+    if (e.which == 20) {
+        $("p#demo").toggle("fast");
+    } */
+    /* else if (e.shiftKey == true) {
+        $('demo').text("Shift key was on").show("fast");
+    }
+    else {
+        $("demo").fadeOut("fast");
+    } */
+    $("demo").html(result);
+    $("demo").show();
+});
+</script>
+</body>
+</html>

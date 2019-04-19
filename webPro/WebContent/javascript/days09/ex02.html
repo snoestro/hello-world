@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 17.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+<h1 id="id01">body firstchild</h1>
+<p id="id02">secondchild</p>
+
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild; 
+
+</script>
+<!--
+[DOM 노드]
+1. html 문서 모든것이 노드
+2. element는 요소노드
+3. <p>print</p> 텍스트노드
+4. <p id="iden"> 속성노드
+5. 주석도 노드
+6. html DOM을 사용하면 dom트리의 모든 노드를 js접근할 수 있다
+7. 새노드 추가 수정 삭제
+8. 최상위 노드 루트노드
+9. 노드간 이동 [탐색]
+   ㄱ parentNode
+   ㄴ childNodes[0]
+   ㄷ firstChild
+   ㄹ lastChild
+   ㅁ nextSibling
+   ㅂ previousSibling
+  -->
+</body>
+</html>

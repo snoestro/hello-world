@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>snoestro 2019. 4. 17.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ 
+<h1 id="htag">확인</h1>
+
+<input type="text" id="message" />
+
+<button type="button" id="btn">버튼</button>
+
+<script>
+var nodeList = document.getElementsByTagName("button"); //Node List
+// alert(nodeList.length);  ==1
+nodeList[0].addEventListener("click", function(e) {
+	//alert(this.innerHTML);
+	alert(this.id);
+}, false);
+
+
+document.querySelector("[type=text]").onchange = function () {
+	console.log("onchange");
+	this.value = this.value.toUpperCase();
+}
+
+</script>
+
+ 
+<script>
+document.getElementById("htag").onmouseover = function () {
+	this.style.color = "red";
+}
+document.getElementById("htag").onmouseout = function () {
+	this.style.color = "black";
+}
+
+</script>
+</body>
+</html>
